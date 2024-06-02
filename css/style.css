@@ -1,0 +1,767 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  height: 150px;
+  width: 100%;
+  background-color: wheat;
+}
+header nav {
+  height: 150px;
+  position: fixed;
+  background-color: wheat;
+  z-index: 10;
+  border-bottom: 1px solid gray;
+  display: flex;
+  width: 100%;
+}
+header nav .main__nav {
+  height: 100%;
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+header nav .main__nav a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: black;
+  font-family: "Press Start 2P", cursive;
+  font-size: 16px;
+  transition: font-size 0.5s ease;
+}
+header nav .main__nav a:hover {
+  font-size: 19px;
+}
+header nav .div__darkmode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10%;
+}
+header nav .container__darkmode {
+  height: 35px;
+  width: 55%;
+  background-color: black;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease;
+}
+header nav .btn__darkmode {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 5px;
+  border-radius: 50%;
+  background-color: wheat;
+  cursor: pointer;
+  transition: left 0.5s ease;
+}
+header nav .container__darkmode.active .btn__darkmode {
+  left: calc(100% - 35px);
+}
+
+@media (max-width: 1400px) {
+  header nav .main__nav a {
+    font-size: 14px;
+  }
+  header nav .main__nav a:hover {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  header nav .main__nav a {
+    font-size: 12px;
+  }
+  header nav .main__nav a:hover {
+    font-size: 14px;
+  }
+  header nav .container__darkmode {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  header nav .container__darkmode {
+    height: 30px;
+    width: 80%;
+  }
+  header nav .btn__darkmode {
+    height: 20px;
+    width: 20px;
+  }
+  header nav .container__darkmode.active .btn__darkmode {
+    left: calc(100% - 25px);
+  }
+}
+@media (max-width: 600px) {
+  header {
+    height: 100px;
+  }
+  header nav {
+    height: 100px;
+  }
+  header nav .main__nav a {
+    font-size: 10px;
+  }
+  header nav .main__nav a:hover {
+    font-size: 12px;
+  }
+  header nav .container__darkmode {
+    height: 25px;
+  }
+}
+@media (max-width: 500px) {
+  header nav .main__nav a {
+    font-size: 8px;
+  }
+  header nav .main__nav a:hover {
+    font-size: 10px;
+  }
+  header nav .container__darkmode {
+    height: 20px;
+  }
+  header nav .btn__darkmode {
+    height: 15px;
+    width: 15px;
+  }
+  header nav .container__darkmode.active .btn__darkmode {
+    left: calc(100% - 20px);
+  }
+}
+@media (max-width: 375px) {
+  header {
+    height: 70px;
+  }
+  header nav {
+    height: 70px;
+  }
+  header nav .main__nav a {
+    font-size: 6px;
+  }
+  header nav .main__nav a:hover {
+    font-size: 8px;
+  }
+  header nav .container__darkmode {
+    height: 15px;
+  }
+  header nav .btn__darkmode {
+    height: 10px;
+    width: 10px;
+  }
+  header nav .container__darkmode.active .btn__darkmode {
+    left: calc(100% - 15px);
+  }
+}
+.active {
+  justify-content: flex-end;
+}
+
+.dark-mode * {
+  background-color: black !important;
+  color: white !important;
+  fill: white;
+}
+
+#light-mode {
+  color: black !important;
+  background-color: white !important;
+}
+
+.accueil {
+  background-color: wheat;
+  padding: 70px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: -10px;
+  height: 665px;
+}
+.accueil .reseaux {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100px;
+}
+.accueil .reseaux a {
+  color: black;
+}
+.accueil .reseaux a i {
+  font-size: 50px;
+  transition: font-size 0.5s ease;
+  cursor: pointer;
+}
+.accueil .reseaux a i:hover {
+  font-size: 60px;
+}
+.accueil img {
+  width: 250px;
+  height: 250px;
+}
+
+@media (max-width: 700px) {
+  .accueil {
+    letter-spacing: -12px;
+    padding: 70px 0px;
+  }
+  .accueil h1 span {
+    font-size: 20px;
+  }
+  .accueil h2 span {
+    font-size: 20px;
+  }
+  .accueil img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .accueil h1 span {
+    font-size: 15px;
+  }
+  .accueil h2 span {
+    font-size: 15px;
+  }
+  .accueil .reseaux a i {
+    font-size: 40px;
+  }
+  .accueil .reseaux a i:hover {
+    font-size: 50px;
+  }
+}
+#l1 {
+  animation: letters 0.75s ease 0ms forwards;
+}
+
+#l2 {
+  animation: letters 0.75s ease 100ms forwards;
+}
+
+#l3 {
+  animation: letters 0.75s ease 200ms forwards;
+}
+
+#l4 {
+  animation: letters 0.75s ease 300ms forwards;
+}
+
+#l5 {
+  animation: letters 0.75s ease 400ms forwards;
+}
+
+#l6 {
+  animation: letters 0.75s ease 500ms forwards;
+}
+
+#l7 {
+  animation: letters 0.75s ease 600ms forwards;
+}
+
+#l8 {
+  animation: letters 0.75s ease 700ms forwards;
+}
+
+#l9 {
+  animation: letters 0.75s ease 800ms forwards;
+}
+
+#l10 {
+  animation: letters 0.75s ease 900ms forwards;
+}
+
+#l11 {
+  animation: letters 0.75s ease 1000ms forwards;
+}
+
+#l12 {
+  animation: letters 0.75s ease 1100ms forwards;
+}
+
+#l13 {
+  animation: letters 0.75s ease 1200ms forwards;
+}
+
+#l14 {
+  animation: letters 0.75s ease 1300ms forwards;
+}
+
+#l15 {
+  animation: letters 0.75s ease 1400ms forwards;
+}
+
+#l16 {
+  animation: letters 0.75s ease 1500ms forwards;
+}
+
+#l17 {
+  animation: letters 0.75s ease 1600ms forwards;
+}
+
+#l18 {
+  animation: letters 0.75s ease 1700ms forwards;
+}
+
+#l19 {
+  animation: letters 0.75s ease 1800ms forwards;
+}
+
+#l20 {
+  animation: letters 0.75s ease 1900ms forwards;
+}
+
+#l21 {
+  animation: letters 0.75s ease 2000ms forwards;
+}
+
+#l22 {
+  animation: letters 0.75s ease 2100ms forwards;
+}
+
+@keyframes letters {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h1 span {
+  opacity: 0;
+}
+
+#l01 {
+  animation: lettre 0.75s ease 100ms forwards;
+}
+
+#l02 {
+  animation: lettre 0.75s ease 200ms forwards;
+}
+
+#l03 {
+  animation: lettre 0.75s ease 300ms forwards;
+}
+
+#l04 {
+  animation: lettre 0.75s ease 400ms forwards;
+}
+
+#l05 {
+  animation: lettre 0.75s ease 500ms forwards;
+}
+
+#l06 {
+  animation: lettre 0.75s ease 600ms forwards;
+}
+
+#l07 {
+  animation: lettre 0.75s ease 700ms forwards;
+}
+
+#l08 {
+  animation: lettre 0.75s ease 800ms forwards;
+}
+
+#l09 {
+  animation: lettre 0.75s ease 900ms forwards;
+}
+
+#l010 {
+  animation: lettre 0.75s ease 1000ms forwards;
+}
+
+#l011 {
+  animation: lettre 0.75s ease 1100ms forwards;
+}
+
+#l012 {
+  animation: lettre 0.75s ease 1200ms forwards;
+}
+
+#l013 {
+  animation: lettre 0.75s ease 1300ms forwards;
+}
+
+#l014 {
+  animation: lettre 0.75s ease 1400ms forwards;
+}
+
+#l015 {
+  animation: lettre 0.75s ease 1500ms forwards;
+}
+
+#l016 {
+  animation: lettre 0.75s ease 1600ms forwards;
+}
+
+#l017 {
+  animation: lettre 0.75s ease 1700ms forwards;
+}
+
+#l018 {
+  animation: lettre 0.75s ease 1800ms forwards;
+}
+
+#l019 {
+  animation: lettre 0.75s ease 1900ms forwards;
+}
+
+#l020 {
+  animation: lettre 0.75s ease 2000ms forwards;
+}
+
+#l021 {
+  animation: lettre 0.75s ease 2100ms forwards;
+}
+
+@keyframes lettre {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h2 span {
+  opacity: 0;
+}
+
+.travaux {
+  border-top: 1px solid grey;
+  padding: 250px 100px 85px 100px;
+  background-color: wheat;
+  border-bottom: 1px grey solid;
+}
+.travaux .title__travaux {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.travaux .title__travaux h3 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+.travaux .title__travaux .border__h3 {
+  width: 30%;
+  height: 1px;
+  background-color: grey;
+}
+.travaux .container__travaux {
+  margin-top: 100px;
+  display: flex;
+  height: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.travaux .container__travaux .box__travaux {
+  height: 250px;
+  width: 30%;
+  border: 1px solid grey;
+  background-color: black;
+}
+.travaux .container__travaux .box__travaux .box__img {
+  width: 100%;
+  position: relative;
+  height: 70%;
+}
+.travaux .container__travaux .box__travaux .box__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.travaux .container__travaux .box__travaux .box__img i {
+  position: absolute;
+  top: 50%;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.travaux .container__travaux .box__travaux .box__img i:hover {
+  opacity: 1;
+  padding: 6px;
+}
+.travaux .container__travaux .box__travaux .box__img .fa-arrow-left {
+  left: 10px;
+}
+.travaux .container__travaux .box__travaux .box__img .fa-arrow-right {
+  right: 10px;
+}
+.travaux .container__travaux .box__travaux .box__description {
+  padding: 20px;
+  text-align: center;
+  height: 30%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-top: 1px solid grey;
+  background-color: white;
+  font-weight: bolder;
+}
+.travaux .container__travaux .box__travaux .box__description:hover {
+  opacity: 0.8;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 22% auto;
+  border: 1px solid #888;
+  width: 40%;
+  text-align: center;
+  border-radius: 5px;
+}
+.modal .modal-content .modal_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.modal .modal-content .modal_title p {
+  font-family: "Press Start 2P", cursive;
+  margin-top: 20px;
+}
+.modal .modal-content .modal_title .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.modal .modal-content .modal_title .close:hover,
+.modal .modal-content .modal_title .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal .modal-content .modal_description {
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.modal .modal-content .modal_description .description {
+  text-align: justify;
+}
+.modal .modal-content .modal_description .description h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.modal .modal-content .modal_description .mission {
+  text-align: justify;
+}
+.modal .modal-content .modal_description .mission h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.modal .modal-content .modal_description .lien__projet {
+  border: 1px solid black;
+  width: 50%;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: wheat;
+}
+.modal .modal-content .modal_description .lien__projet a {
+  text-decoration: none;
+  color: black;
+}
+.modal .modal-content .modal_description .lien__projet a:hover {
+  font-weight: bold;
+}
+
+.competences {
+  background-color: wheat;
+  height: 600px;
+  padding: 250px 100px 100px 100px;
+  border-bottom: 1px grey solid;
+}
+.competences .title__competences {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.competences .title__competences h3 {
+  font-family: "Press Start 2P", cursive;
+}
+.competences .title__competences .border__h3 {
+  width: 30%;
+  height: 1px;
+  background-color: grey;
+}
+.competences .list__competences {
+  height: 400px;
+  margin-top: 100px;
+  padding: 50px 300px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  flex-wrap: wrap;
+}
+.competences .list__competences i {
+  font-size: 70px;
+  opacity: 0;
+}
+.competences .list__competences .competence-icon {
+  width: 70px;
+  height: 70px;
+  opacity: 0;
+}
+
+@keyframes icones {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.contact {
+  background-color: wheat;
+  height: 600px;
+  padding: 250px 100px 100px 100px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.contact .title__contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.contact .title__contact h3 {
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+}
+.contact .title__contact .border__h3 {
+  width: 30%;
+  height: 1px;
+  background-color: grey;
+}
+.contact .container__form {
+  height: 400px;
+  margin-top: 100px;
+  width: 60%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.contact .container__form .form__content {
+  display: flex;
+  height: 400px;
+  background-color: white;
+  border-radius: 10px;
+}
+.contact .container__form .form__content .container__left {
+  padding: 50px 20px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 80px;
+  border-radius: 10px;
+}
+.contact .container__form .form__content .container__left .left__name {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact .container__form .form__content .container__left .left__name h4 {
+  font-size: 16px;
+  font-family: "Press Start 2P", cursive;
+}
+.contact .container__form .form__content .container__left .left__name p {
+  font-size: 19px;
+}
+.contact .container__form .form__content .container__left .left__info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.contact .container__form .form__content .container__left .left__info p {
+  font-weight: bold;
+  font-size: 18px;
+}
+.contact .container__form .form__content .container__left .left__info p i {
+  margin-right: 10px;
+}
+.contact .container__form .form__content .container__right {
+  width: 40%;
+  padding: 25px 25px;
+  border-radius: 10px;
+}
+.contact .container__form .form__content .container__right form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.contact .container__form .form__content .container__right form input {
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  border: black 1px solid;
+  width: 80%;
+}
+.contact .container__form .form__content .container__right form textarea {
+  border-radius: 5px;
+  outline: none;
+  border: black 1px solid;
+  padding: 5px;
+  width: 100%;
+}
+.contact .container__form .form__content .container__right form .submit {
+  background-color: wheat;
+  font-weight: bold;
+  cursor: pointer;
+  width: 60%;
+}
+.contact .container__form .form__content .container__right form .submit:active {
+  border: 2px solid black;
+}
+
+footer {
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  gap: 10px;
+}
+footer i {
+  margin-bottom: 2px;
+}
+
+/*# sourceMappingURL=style.css.map */

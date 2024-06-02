@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="main__nav">
+                <a href="#header">Accueil</a>
+                <a href="#travaux">Travaux</a>
+                <a href="#competences">Compétences</a>
+                <a href="#contact">Contact</a>
+                <a href="">Mon CV</a>
+            </div>
+            <div class="div__darkmode">
+                <div class="container__darkmode">
+                    <div class="btn__darkmode">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="accueil" id="accueil">
+        <h1>
+            <span id="l1">M</span>
+            <span id="l2">A</span>
+            <span id="l3">R</span>
+            <span id="l4">Q</span>
+            <span id="l5">U</span>
+            <span id="l6">E</span>
+            <span id="l7">S</span>
+            <span id="l8">&nbsp;</span>
+            <span id="l9">D</span>
+            <span id="l10">A</span>
+            <span id="l11"> &nbsp;</span>
+            <span id="l12">C</span>
+            <span id="l13">O</span>
+            <span id="l14">S</span>
+            <span id="l15">T</span>
+            <span id="l16">A</span>
+            <br>
+            <span id="l17">T</span>
+            <span id="l18">H</span>
+            <span id="l19">O</span>
+            <span id="l20">M</span>
+            <span id="l21">A</span>
+            <span id="l22">S</span>
+        </h1>
+        <img src="./assets/images/bitmojiperso.png" alt="">
+        <h2>
+            <span id="l01">D</span>
+            <span id="l02">é</span>
+            <span id="l03">v</span>
+            <span id="l04">e</span>
+            <span id="l05">l</span>
+            <span id="l06">o</span>
+            <span id="l07">p</span>
+            <span id="l08">p</span>
+            <span id="l09">e</span>
+            <span id="l010">u</span>
+            <span id="l011">r</span>
+            <span > &nbsp;</span>
+            <span id="l012"> - </span>
+            <span > &nbsp;</span>
+            <span id="l013">W</span>
+            <span id="l014">e</span>
+            <span id="l015">b</span>
+            <br>
+            <span id="l016">J</span>
+            <span id="l017">u</span>
+            <span id="l018">n</span>
+            <span id="l019">i</span>
+            <span id="l020">o</span>
+            <span id="l021">r</span>
+            <div class="reseaux">
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href=""><i class="fab fa-github-square"></i></a>
+            </div>
+    </section>
+    <section class="travaux" id="travaux">
+        <div class="title__travaux">
+            <div class="border__h3"></div>
+            <h3>Mes travaux</h3>
+            <div class="border__h3"></div>
+        </div>
+        <div class="container__travaux">
+            <div class="box__travaux">
+                <div class="box__img">
+                    <i class="fa-solid fa-arrow-left" onclick="prevImage()"></i>
+                    <img id="carouselImage" src="./assets/images/ninacarducci/screen1.png" alt="">
+                    <i class="fa-solid fa-arrow-right" onclick="nextImage()"></i>
+                </div>
+                <div class="box__description" onclick="openModal('Nina-Carducci')">
+                    <p>Voir le projet Nina-Carducci</p>
+                </div>
+            </div>
+            <div class="box__travaux">
+                <div class="box__img">
+                    <i class="fa-solid fa-arrow-left" onclick="prevImage1()"></i>
+                    <img id="carouselImage1" src="./assets/images/booki/screen1.png" alt="">
+                    <i class="fa-solid fa-arrow-right" onclick="nextImage1()"></i>
+                </div>
+                <div class="box__description" onclick="openModal('Booki')">
+                    <p>Voir le projet Booki</p>
+                </div>
+            </div>
+            <div class="box__travaux">
+                <div class="box__img">
+                    <i class="fa-solid fa-arrow-left" onclick="prevImage2()"></i>
+                    <img id="carouselImage2" src="./assets/images/ohmyfood/screen1.png" alt="">
+                    <i class="fa-solid fa-arrow-right" onclick="nextImage2()"></i>
+                </div>
+                <div class="box__description" onclick="openModal('OhMyFood')">
+                    <p>Voir le projet OhMyFood</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal_title">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p id="modalText"></p>
+                <span style="visibility: hidden;" >&times;</span>
+            </div>
+            <div class="modal_description" id="modalDescription">
+                <div class="description">
+                    <h4 class="dark-ok">Description :</h4>
+                    <p class="dark-ok" id="description"></p>
+                </div>
+                <div class="mission">
+
+                </div>
+                <div class="lien__projet">
+                    <a href=""  id="projectLink" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="competences" id="competences">
+        <div class="title__competences">
+            <div class="border__h3"></div>
+            <h3>Mes compétences</h3>
+            <div class="border__h3"></div>
+        </div>
+    <div class="list__competences">
+        <div class="list__une">
+            <i class="fa-brands fa-html5 competence-icon" id="i1"></i>
+            <i class="fa-brands fa-css3-alt competence-icon" id="i2"></i>
+            <i class="fa-brands fa-js competence-icon" id="i3"></i>
+            <i class="fa-brands fa-sass competence-icon" id="i4"></i>
+            <i class="fa-brands fa-bootstrap competence-icon" id="i5"></i>
+        </div>
+        <div class="list__deux">
+            <i class="fa-brands fa-react competence-icon" id="i6"></i>
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="competence-icon" id="i7">
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
+                    <path clip-rule="evenodd"
+                        d="M70.9119 99.3171C72.4869 99.9307 74.2828 99.8914 75.8725 99.1264L96.4608 89.2197C98.6242 88.1787 100 85.9892 100 83.5872V16.4133C100 14.0113 98.6243 11.8218 96.4609 10.7808L75.8725 0.873756C73.7862 -0.130129 71.3446 0.11576 69.5135 1.44695C69.252 1.63711 69.0028 1.84943 68.769 2.08341L29.3551 38.0415L12.1872 25.0096C10.589 23.7965 8.35363 23.8959 6.86933 25.2461L1.36303 30.2549C-0.452552 31.9064 -0.454633 34.7627 1.35853 36.417L16.2471 50.0001L1.35853 63.5832C-0.454633 65.2374 -0.452552 68.0938 1.36303 69.7453L6.86933 74.7541C8.35363 76.1043 10.589 76.2037 12.1872 74.9905L29.3551 61.9587L68.769 97.9167C69.3925 98.5406 70.1246 99.0104 70.9119 99.3171ZM75.0152 27.2989L45.1091 50.0001L75.0152 72.7012V27.2989Z" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <path
+                        d="M96.4614 10.7962L75.8569 0.875542C73.4719 -0.272773 70.6217 0.211611 68.75 2.08333L1.29858 63.5832C-0.515693 65.2373 -0.513607 68.0937 1.30308 69.7452L6.81272 74.754C8.29793 76.1042 10.5347 76.2036 12.1338 74.9905L93.3609 13.3699C96.086 11.3026 100 13.2462 100 16.6667V16.4275C100 14.0265 98.6246 11.8378 96.4614 10.7962Z" />
+                    <g filter="url(#filter0_d)">
+                        <path
+                            d="M96.4614 89.2038L75.8569 99.1245C73.4719 100.273 70.6217 99.7884 68.75 97.9167L1.29858 36.4169C-0.515693 34.7627 -0.513607 31.9063 1.30308 30.2548L6.81272 25.246C8.29793 23.8958 10.5347 23.7964 12.1338 25.0095L93.3609 86.6301C96.086 88.6974 100 86.7538 100 83.3334V83.5726C100 85.9735 98.6246 88.1622 96.4614 89.2038Z" />
+                    </g>
+                    <g filter="url(#filter1_d)">
+                        <path
+                            d="M75.8578 99.1263C73.4721 100.274 70.6219 99.7885 68.75 97.9166C71.0564 100.223 75 98.5895 75 95.3278V4.67213C75 1.41039 71.0564 -0.223106 68.75 2.08329C70.6219 0.211402 73.4721 -0.273666 75.8578 0.873633L96.4587 10.7807C98.6234 11.8217 100 14.0112 100 16.4132V83.5871C100 85.9891 98.6234 88.1786 96.4586 89.2196L75.8578 99.1263Z" />
+                    </g>
+                    <g style="mix-blend-mode:overlay" opacity="0.25">
+                        <path clip-rule="evenodd"
+                            d="M70.8511 99.3171C72.4261 99.9306 74.2221 99.8913 75.8117 99.1264L96.4 89.2197C98.5634 88.1787 99.9392 85.9892 99.9392 83.5871V16.4133C99.9392 14.0112 98.5635 11.8217 96.4001 10.7807L75.8117 0.873695C73.7255 -0.13019 71.2838 0.115699 69.4527 1.44688C69.1912 1.63705 68.942 1.84937 68.7082 2.08335L29.2943 38.0414L12.1264 25.0096C10.5283 23.7964 8.29285 23.8959 6.80855 25.246L1.30225 30.2548C-0.513334 31.9064 -0.515415 34.7627 1.29775 36.4169L16.1863 50L1.29775 63.5832C-0.515415 65.2374 -0.513334 68.0937 1.30225 69.7452L6.80855 74.754C8.29285 76.1042 10.5283 76.2036 12.1264 74.9905L29.2943 61.9586L68.7082 97.9167C69.3317 98.5405 70.0638 99.0104 70.8511 99.3171ZM74.9544 27.2989L45.0483 50L74.9544 72.7012V27.2989Z" />
+                    </g>
+                </g>
+                <defs>
+                    <filter id="filter0_d" x="-8.39411" y="15.8291" width="116.727" height="92.2456" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="4.16667" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                        <feBlend mode="overlay" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                    </filter>
+                    <filter id="filter1_d" x="60.4167" y="-8.07558" width="47.9167" height="116.151" filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="4.16667" />
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                        <feBlend mode="overlay" in2="BackgroundImageFix" result="effect1_dropShadow" />
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
+                    </filter>
+                    <linearGradient id="paint0_linear" x1="49.9392" y1="0.257812" x2="49.9392" y2="99.7423"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="white" />
+                        <stop offset="1" stop-color="white" stop-opacity="0" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            <i class="fa-brands fa-git-alt competence-icon" id="i8"></i>
+            <i class="fa-brands fa-github competence-icon" id="i9"></i>
+            <svg width="800px" height="800px" viewBox="0 -6 256 256" xmlns="http://www.w3.org/2000/svg" class="competence-icon"
+                id="i10" preserveAspectRatio="xMidYMid">
+                <path
+                    d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+                    fill="#000" />
+            </svg>
+        </div>
+    </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="title__contact">
+            <div class="border__h3"></div>
+            <h3>Contact</h3>
+            <div class="border__h3"></div>
+        </div>
+        <div class="container__form">
+            <div class="form__content">
+                <div class="container__left">
+                    <div class="left__name">
+                        <h4>Marques Da Costa <br>Thomas</h4>
+                        <p class="dark-ok">N'hesitez pas à me contacter !</p>
+                    </div>
+                    <div class="left__info">
+                        <p class="dark-ok"><i class="fa-solid fa-location-dot icone-form"></i> Poitiers, 86000</p>
+                        <p class="dark-ok"><i class="fa-solid fa-envelope icone-form"></i> tomasmarquesdacosta@gmail.com</p>
+                        <p class="dark-ok"><i class="fa-solid fa-phone icone-form"></i> 06 02 64 55 14</p>
+                    </div>
+                </div>
+                <div class="container__right">
+                    <form  action="">
+                        <input type="email" name="mail" id="mail" placeholder="Email" required>
+                        <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                        <input type="text" name="objet" id="objet" placeholder="Objet" required>
+                        <textarea name="msg" id="msg" placeholder="Votre message.." cols="30" rows="10" required></textarea>
+                        <input type="submit" name="envoyer" value="Envoyer" class="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
