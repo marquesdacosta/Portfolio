@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
-//
+// declenchement animation au scroll sur la section concerné
 
   document.addEventListener("DOMContentLoaded", function() {
         const icons = document.querySelectorAll('.competence-icon, .div__icone');
@@ -229,3 +229,12 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(icon);
         });
     });
+
+
+// mobile , retirer le focus et hover apres le clic (header)
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                this.blur();
+            });
+        });
