@@ -15,7 +15,9 @@ header {
         height: 150px;
         position: fixed;
         background-color: wheat;
-        z-index: 10;
+        z-index: 1000;
+        top: 0;
+        left: 0;
         border-bottom: 1px solid gray;
         display: flex;
         width: 100%;
@@ -208,6 +210,9 @@ header {
 #light-mode {
     color: black !important;
     background-color: white !important;
+}
+.borderskill {
+    border: 1px white solid !important;
 }
 
 // SECTION ACCUEIL// 
@@ -671,7 +676,7 @@ h2 span {
 .competences {
     background-color: wheat;
     height: 600px;
-    padding: 250px 100px 100px 100px;
+    padding: 250px 50px 50px 50px;
     border-bottom: 1px grey solid;
     .title__competences {
         display: flex;
@@ -690,13 +695,35 @@ h2 span {
     .list__competences {
         height: 400px;
         margin-top: 100px;
-        padding: 50px 300px;
+        padding: 50px 0px;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 90px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        .list__une {
+            display: flex;
+            gap: 50px;
+            .div__icone {
+                border: 1px black solid;
+                padding: 15px;
+                text-align: center;
+                background-color: white;
+                opacity: 0;
+            }
+        }
+        .list__deux {
+            display: flex;
+            gap: 50px;
+            .div__icone {
+                border: 1px black solid;
+                background-color: white;
+                padding: 15px;
+                text-align: center;
+                opacity: 0;
+            }
+        }
         i {
             font-size: 70px;
             opacity: 0;
@@ -708,6 +735,7 @@ h2 span {
         }
     }
 }
+
 // animation icones // 
 
 @keyframes icones {
@@ -720,6 +748,129 @@ h2 span {
     }
 }
 
+.competence-icon.animated,
+.div__icone.animated {
+    animation: icones 0.75s ease forwards;
+}   
+
+
+#i1.animated {
+    animation-delay: 200ms;
+}
+
+#i2.animated {
+    animation-delay: 400ms;
+}
+
+#i3.animated {
+    animation-delay: 600ms;
+}
+
+#i4.animated {
+    animation-delay: 800ms;
+}
+
+#i5.animated {
+    animation-delay: 1000ms;
+}
+
+#i6.animated {
+    animation-delay: 1200ms;
+}
+
+#i7.animated {
+    animation-delay: 1400ms;
+}
+
+#i8.animated {
+    animation-delay: 1600ms;
+}
+
+#i9.animated {
+    animation-delay: 1800ms;
+}
+
+#i10.animated {
+    animation-delay: 2000ms;
+}
+// RESPONSIVE //
+
+
+@media (max-width: 1200px ){
+    .competences {
+        .title__competences {
+            .border__h3 {
+                width: 20%;
+            }
+        }
+    }
+}
+@media (max-width: 900px) {
+    .competences {
+        .title__competences {
+            h3 {
+                font-size: 15px;
+            }
+            .border__h3 {
+                width: 15%;
+            }
+        }
+        .list__competences {
+            .list__une , .list__deux {
+                .div__icone {
+                    .competence-icon {
+                        font-size: 40px;
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 700px) {
+    .competences {
+        .list__competences {
+            gap: 50px;
+            height: auto;
+            .list__une , .list__deux {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+        }
+        .title__competences {
+            h3 {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .competences {
+        padding: 180px 50px 50px 50px;
+        .title__competences {
+            h3 {
+                font-size: 10px;
+            }
+            .border__h3 {
+                display: none;
+            }
+        }
+        .list__competences {
+            margin-top: 50px;
+            .list__une , .list__deux {
+                gap: 25px;
+                .div__icone {
+                    .competence-icon {
+                        font-size: 30px;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 // SECTION CONTACT //
 
@@ -826,6 +977,9 @@ h2 span {
         }
     }
 }
+
+// RESPONSIVE //
+
 
 
 // FOOTER // 

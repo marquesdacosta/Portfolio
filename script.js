@@ -7,19 +7,33 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnDarkmode = document.querySelector('.btn__darkmode');
     const containerDarkmode = document.querySelector('.container__darkmode');
     const formElements = document.querySelectorAll('.form__content, .container__left, .left__name, .left__info, .container__right, h4, .dark-ok, .icone-form , input , textarea, form, .container__form');
-
+    const borderskills = document.querySelectorAll('.div__icone');
+    const borderstitle = document.querySelectorAll('.border__h3');
     
     btnDarkmode.addEventListener('click', function() {
         containerDarkmode.classList.toggle('active');
         
         if (containerDarkmode.classList.contains('active')) {
             document.body.classList.add('dark-mode');
+            borderskills.forEach(skill => {
+                skill.classList.add('borderskill');
+            });
+            borderstitle.forEach(element => {
+                element.id = "light-mode";
+            });
             containerDarkmode.id = "light-mode";
             formElements.forEach(element => {
                 element.id = "light-mode";
             });
         } else {
             document.body.classList.remove('dark-mode');
+            borderskills.forEach(skill => {
+                skill.classList.remove('borderskill');
+            });
+            borderstitle.forEach(element => {
+                element.id = null;
+            });
+            borderstitle.id = null;
             containerDarkmode.id = null;
             formElements.forEach(element => {
                 element.id = null;
@@ -189,49 +203,29 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 });
 
+//
 
-//  Animation competences declenchement //
+  document.addEventListener("DOMContentLoaded", function() {
+        const icons = document.querySelectorAll('.competence-icon, .div__icone');
 
-// Ajoute un écouteur d'événement pour s'assurer que le script est exécuté après le chargement complet du DOM
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // Sélectionne la section contenant les compétences
-    const section = document.querySelector('.list__competences');
-    
-    // Sélectionne tous les éléments avec la classe 'competence-icon' dans la section
-    const icons = document.querySelectorAll('.competence-icon');
-    
-    // Options pour configurer l'Intersection Observer
-    const options = {
-        root: null, // Utilise la fenêtre de visualisation (viewport) comme conteneur racine
-        rootMargin: '0px', // Aucun décalage supplémentaire autour du conteneur racine
-        threshold: 0.5 // La fonction de rappel se déclenchera quand 50% de la section sera visible
-    };
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.1
+        };
 
-    // Fonction de rappel appelée par l'Intersection Observer
-    const callback = (entries, observer) => {
-        // Pour chaque entrée observée (seulement une dans ce cas, car nous observons une seule section)
-        entries.forEach(entry => {
-            // Si l'entrée est visible (intersection avec la fenêtre de visualisation)
-            if (entry.isIntersecting) {
-                console.log('Section is intersecting');
-                
-                // Pour chaque icône, applique une animation avec un délai croissant
-                icons.forEach((icon, index) => {
-                    console.log(`Animating icon ${index + 1}`);
-                    // Applique une animation de style avec un délai basé sur l'index
-                    icon.style.animation = `icones 0.75s ease ${(index + 1) * 100}ms forwards`;
-                });
-                
-                // Déconnecte l'observateur une fois l'animation déclenchée pour éviter de le refaire
-                observer.disconnect();
-            }
+        const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target); // Stop observing once animated
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+        icons.forEach(icon => {
+            observer.observe(icon);
         });
-    };
-
-    // Crée une instance d'Intersection Observer avec la fonction de rappel et les options définies
-    const observer = new IntersectionObserver(callback, options);
-    
-    // Commence à observer la section des compétences
-    observer.observe(section);
-});
+    });
