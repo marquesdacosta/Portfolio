@@ -193,6 +193,9 @@ header nav .container__darkmode.active .btn__darkmode {
   letter-spacing: -10px;
   height: 665px;
 }
+.accueil h1, .accueil h2 {
+  width: 100%;
+}
 .accueil .reseaux {
   margin-top: 50px;
   display: flex;
@@ -809,7 +812,7 @@ h2 span {
   border-radius: 10px;
 }
 .contact .container__form .form__content .container__left {
-  padding: 50px 20px;
+  padding: 50px 0px 50px 20px;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -843,7 +846,7 @@ h2 span {
 }
 .contact .container__form .form__content .container__right {
   width: 40%;
-  padding: 25px 25px;
+  padding: 25px 25px 25px 0px;
   border-radius: 10px;
 }
 .contact .container__form .form__content .container__right form {
@@ -876,6 +879,63 @@ h2 span {
   border: 2px solid black;
 }
 
+@media (max-width: 1400px) {
+  .contact .container__form .form__content .container__left .left__name h4 {
+    font-size: 12px;
+  }
+  .contact .container__form .form__content .container__left .left__name p {
+    font-size: 16px;
+  }
+  .contact .container__form .form__content .container__left .left__info {
+    gap: 50px;
+  }
+  .contact .container__form .form__content .container__left .left__info p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .contact .container__form {
+    width: 80%;
+  }
+}
+@media (max-width: 1000px) {
+  .contact .container__form {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .contact {
+    height: auto;
+  }
+  .contact .container__form {
+    height: auto;
+  }
+  .contact .container__form .form__content {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact .container__form .form__content .container__left {
+    padding: 20px 0px 0px 0px;
+    width: auto;
+    gap: 10px;
+  }
+  .contact .container__form .form__content .container__left .left__info {
+    gap: 20px;
+  }
+  .contact .container__form .form__content .container__right {
+    width: 60%;
+    padding: 25px 0px 25px 0px;
+  }
+}
+@media (max-width: 600px) {
+  .contact {
+    padding: 250px 30px 100px 30px;
+  }
+  .contact .container__form .form__content .container__right {
+    width: 80%;
+  }
+}
 footer {
   background-color: wheat;
   display: flex;
