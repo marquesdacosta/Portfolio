@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const formElements = document.querySelectorAll('.form__content, .container__left, .left__name, .left__info, .container__right, h4, .dark-ok, .icone-form , input , textarea, form, .container__form');
     const borderskills = document.querySelectorAll('.div__icone');
     const borderstitle = document.querySelectorAll('.border__h3');
+    const textapropos = document.querySelectorAll('.text__a-propos , .text__p');
     
     btnDarkmode.addEventListener('click', function() {
         containerDarkmode.classList.toggle('active');
-        
         if (containerDarkmode.classList.contains('active')) {
             document.body.classList.add('dark-mode');
             borderskills.forEach(skill => {
@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             borderstitle.forEach(element => {
                 element.id = "light-mode";
+            });
+            textapropos.forEach(element => {
+                element.id = "apropos-mode";
             });
             containerDarkmode.id = "light-mode";
             formElements.forEach(element => {
@@ -31,6 +34,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 skill.classList.remove('borderskill');
             });
             borderstitle.forEach(element => {
+                element.id = null;
+            });
+            textapropos.forEach(element => {
                 element.id = null;
             });
             borderstitle.id = null;
@@ -229,12 +235,3 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(icon);
         });
     });
-
-
-// mobile , retirer le focus et hover apres le clic (header)
-
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                this.blur();
-            });
-        });

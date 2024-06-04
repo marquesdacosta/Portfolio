@@ -81,10 +81,10 @@ header nav .container__darkmode.active .btn__darkmode {
 }
 @media (max-width: 1200px) {
   header nav .main__nav a {
-    font-size: 12px;
+    font-size: 10px;
   }
   header nav .main__nav a:hover {
-    font-size: 14px;
+    font-size: 12px;
   }
   header nav .container__darkmode {
     width: 70%;
@@ -111,10 +111,10 @@ header nav .container__darkmode.active .btn__darkmode {
     height: 100px;
   }
   header nav .main__nav a {
-    font-size: 10px;
+    font-size: 8px;
   }
   header nav .main__nav a:hover {
-    font-size: 12px;
+    font-size: 10px;
   }
   header nav .container__darkmode {
     height: 25px;
@@ -138,7 +138,7 @@ header nav .container__darkmode.active .btn__darkmode {
     left: calc(100% - 20px);
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 500px) {
   header {
     height: 70px;
   }
@@ -179,6 +179,11 @@ header nav .container__darkmode.active .btn__darkmode {
 
 .borderskill {
   border: 1px white solid !important;
+}
+
+#apropos-mode {
+  background-color: #227d3a !important;
+  color: black !important;
 }
 
 .accueil {
@@ -446,6 +451,108 @@ h2 span {
   opacity: 0;
 }
 
+.a-propos {
+  height: 600px;
+  padding: 150px 100px;
+  background-color: wheat;
+}
+.a-propos .title__a-propos {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.a-propos .title__a-propos .border__h3 {
+  width: 30%;
+  height: 1px;
+  background-color: grey;
+}
+.a-propos .title__a-propos h3 {
+  font-family: "Press Start 2P", cursive;
+}
+.a-propos .container__a-propos {
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a-propos .container__a-propos .text__a-propos {
+  height: 360px;
+  background-color: black;
+  width: 70%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.a-propos .container__a-propos .text__a-propos p {
+  color: #227d3a;
+  font-family: "Press Start 2P", cursive;
+  line-height: 35px;
+}
+
+@media (max-width: 1400px) {
+  .a-propos .container__a-propos .text__a-propos {
+    height: 400px;
+    width: 80%;
+  }
+  .a-propos .container__a-propos .text__a-propos p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1200px) {
+  .a-propos .container__a-propos .text__a-propos {
+    width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  .a-propos {
+    padding: 150px 50px;
+  }
+  .a-propos .container__a-propos .text__a-propos p {
+    font-size: 12px;
+  }
+  .a-propos .title__a-propos .border__h3 {
+    width: 15%;
+  }
+  .a-propos .title__a-propos h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .a-propos {
+    padding: 150px 25px;
+  }
+  .a-propos .title__a-propos h3 {
+    font-size: 12px;
+  }
+  .a-propos .container__a-propos .text__a-propos p {
+    font-size: 10px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .a-propos {
+    padding: 120px 10px;
+  }
+  .a-propos .title__a-propos {
+    margin-top: 50px;
+  }
+  .a-propos .title__a-propos h3 {
+    font-size: 10px;
+  }
+  .a-propos .title__a-propos .border__h3 {
+    display: none;
+  }
+  .a-propos .container__a-propos .text__a-propos p {
+    font-size: 8px;
+    line-height: 25px;
+  }
+}
 .travaux {
   border-top: 1px solid grey;
   padding: 250px 100px 85px 100px;
