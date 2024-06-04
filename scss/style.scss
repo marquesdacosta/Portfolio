@@ -648,7 +648,7 @@ h2 span {
 
 .travaux {
     border-top: 1px solid grey;
-    padding: 250px 100px 85px 100px;
+    padding: 200px 100px 85px 100px;
     background-color: wheat;
     border-bottom: 1px grey solid;
     .title__travaux {
@@ -667,13 +667,13 @@ h2 span {
         }
     }
     .container__travaux {
-        margin-top: 100px;
+        margin-top: 50px;
         display: flex;
-        height: 400px;
         align-items: center;
         justify-content: space-evenly;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding-top: 30px;
+        flex-wrap: wrap;
+        gap: 50px;
         .box__travaux {
             height: 250px;
             width: 30%;
@@ -686,7 +686,7 @@ h2 span {
                 img {
                     width: 100%;
                     height: 100%;
-                    object-fit: fill;
+                    object-fit: cover;
                 }
                 i {
                     position: absolute;

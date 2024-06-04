@@ -555,7 +555,7 @@ h2 span {
 }
 .travaux {
   border-top: 1px solid grey;
-  padding: 250px 100px 85px 100px;
+  padding: 200px 100px 85px 100px;
   background-color: wheat;
   border-bottom: 1px grey solid;
 }
@@ -575,13 +575,13 @@ h2 span {
   background-color: grey;
 }
 .travaux .container__travaux {
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
-  height: 400px;
   align-items: center;
   justify-content: space-evenly;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 30px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 .travaux .container__travaux .box__travaux {
   height: 250px;
@@ -597,7 +597,7 @@ h2 span {
 .travaux .container__travaux .box__travaux .box__img img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 .travaux .container__travaux .box__travaux .box__img i {
   position: absolute;

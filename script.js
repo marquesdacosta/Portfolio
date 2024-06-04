@@ -49,82 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
-
-// CAROUSEL //
-//1//
-document.addEventListener('DOMContentLoaded', function() {
-    const images = [
-        './assets/images/ninacarducci/screen1.png',
-        './assets/images/ninacarducci/screen2.png',
-        './assets/images/ninacarducci/screen3.png'
-    ];
-    let currentIndex = 0;
-
-    function updateImage() {
-        const carouselImage = document.getElementById('carouselImage');
-        carouselImage.src = images[currentIndex];
-    }
-
-    window.prevImage = function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        updateImage();
-    };
-
-    window.nextImage = function() {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-        updateImage();
-    };
-});
-//2//
-document.addEventListener('DOMContentLoaded', function() {
-    const images = [
-        './assets/images/booki/screen1.png',
-        './assets/images/booki/screen2.png'
-    ];
-    let currentIndex = 0;
-
-    function updateImage() {
-        const carouselImage = document.getElementById('carouselImage1');
-        carouselImage.src = images[currentIndex];
-    }
-
-    window.prevImage1 = function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        updateImage();
-    };
-
-    window.nextImage1 = function() {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-        updateImage();
-    };
-});
-//3//
-document.addEventListener('DOMContentLoaded', function() {
-    const images = [
-        './assets/images/ohmyfood/screen1.png',
-        './assets/images/ohmyfood/screen2.png',
-        './assets/images/ohmyfood/screen3.png'
-    ];
-    let currentIndex = 0;
-
-    function updateImage() {
-        const carouselImage = document.getElementById('carouselImage2');
-        carouselImage.src = images[currentIndex];
-    }
-
-    window.prevImage2 = function() {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
-        updateImage();
-    };
-
-    window.nextImage2 = function() {
-        currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
-        updateImage();
-    };
-});
-
 // MODAL //
 
 const projectDescriptions = {
@@ -177,7 +101,43 @@ const projectDescriptions = {
             </ul>
         `,
         link: 'https://marquesdacosta.github.io/Ohmyfood/'
-    }
+    },
+    'Kaza': {
+        description:`
+            <h4>Description :</h4>
+            <p>Le projet vise a refondre entièrement le site Kaza , une agence de location d'appartement entre particuliers en France en utilisant une stack Javascript Moderne.</p>`,
+        mission: `
+            <h4>Mission :</h4>
+            <ul>
+                <li>Création du site sous forme de composant grace a React , avec une interface responsive.</li>
+            </ul>
+        `,
+        link : 'https://github.com/marquesdacosta/Kaza'
+    },
+    'Sophie-Bluel': {
+        description:`
+            <h4>Description :</h4>
+            <p></p>`,
+        mission:`
+            <h4>Mission: </h4>
+            <ul>
+                <li></li>
+            </ul>
+        `,
+        link : 'https://github.com/marquesdacosta/Portfolio-architecte-sophie-bluel/tree/master/FrontEnd'
+    },
+    'Argent-Bank': {
+        description:`
+            <h4>Description :</h4>
+            <p></p>`,
+        mission:`
+            <h4>Mission: </h4>
+            <ul>
+                <li></li>
+            </ul>
+        `,
+        link : ''
+    },
 };
 
 document.addEventListener('DOMContentLoaded', function() {
