@@ -7,7 +7,7 @@
     <title>Portfolio Thomas Marques Da Costa</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" preload>
     <meta name="description" content="Mon portfolio de Developpeur Web Junior">
     <script src="script.js" defer></script>
 </head>
@@ -111,52 +111,52 @@
             <div class="border__h3"></div>
         </div>
         <div class="container__travaux">
-            <div class="box__travaux">
+            <div class="box__travaux"  onclick="openModal('Nina-Carducci')">
                 <div class="box__img">
                     <img src="./assets/images/ninacarducci/screen3.webp" alt="imageninacarducci">
                 </div>
-                <div class="box__description" onclick="openModal('Nina-Carducci')">
-                    <p>Voir le projet Nina-Carducci</p>
+                <div class="box__description">
+                    <p>Nina-Carducci</p>
                 </div>
             </div>
-            <div class="box__travaux">
+            <div class="box__travaux"  onclick="openModal('Booki')">
                 <div class="box__img">
                     <img src="./assets/images/booki/screen1.webp" alt="imagebooki">
                 </div>
-                <div class="box__description" onclick="openModal('Booki')">
-                    <p>Voir le projet Booki</p>
+                <div class="box__description">
+                    <p>Booki</p>
                 </div>
             </div>
-            <div class="box__travaux">
+            <div class="box__travaux" onclick="openModal('OhMyFood')">
                 <div class="box__img">
                     <img src="./assets/images/ohmyfood/screen3.webp" alt="imageohmyfood">
                 </div>
-                <div class="box__description" onclick="openModal('OhMyFood')">
-                    <p>Voir le projet OhMyFood</p>
+                <div class="box__description">
+                    <p>OhMyFood</p>
                 </div>
             </div>
-            <div class="box__travaux">
+            <div class="box__travaux" onclick="openModal('Kaza')">
                 <div class="box__img">
                     <img src="./assets/images/kaza/screen1.webp" alt="imagekaza">
                 </div>
-                <div class="box__description" onclick="openModal('Kaza')">
-                    <p>Voir le projet Kaza</p>
+                <div class="box__description">
+                    <p>Kaza</p>
                 </div>
             </div>
-            <div class="box__travaux">
+            <div class="box__travaux" onclick="openModal('Sophie-Bluel')">
                 <div class="box__img">
                     <img src="./assets/images/sophie-bluel/screen1.webp" alt="imagesophiebluel">
                 </div>
-                <div class="box__description" onclick="openModal('Sophie-Bluel')">
-                    <p>Voir le projet Sophie Bluel</p>
+                <div class="box__description">
+                    <p>Sophie Bluel</p>
                 </div>
             </div>
-            <div class="box__travaux">
+            <div class="box__travaux" onclick="openModal('Argent-Bank')">
                 <div class="box__img">
                     <img src="./assets/images/argentbank/screen1.webp" alt="imageargentbank">
                 </div>
-                <div class="box__description" onclick="openModal('Argent-Bank')">
-                    <p>Voir le projet Argent Bank</p>
+                <div class="box__description">
+                    <p>Argent Bank</p>
                 </div>
             </div>
         </div>
@@ -278,13 +278,13 @@
                     </div>
                 </div>
                 <div class="container__right">
-                    <form method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <form method="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
                         <!-- Champ caché pour le nom du formulaire -->
                         <input type="hidden" name="form-name" value="contact">
                     
                         <!-- Champ honeypot pour le spam -->
                         <p style="display:none;">
-                            <label>Ne pas remplir ceci : <input name="bot-field"></label>
+                            <label><input name="bot-field"></label>
                         </p>
                     
                         <!-- Champs du formulaire -->
@@ -310,7 +310,7 @@
                 <a href="./assets/images/Portfolio darkmode-1.pdf" download="./assets/images/Portfolio-darkmode-1.pdf">Telecharger le CV</a>
             </div>
             <div class="cv__light">
-                <a href="./assets/images/Portfolio-lightmode-1.webp" target="_blank"><img src="./assets/images/Portfolio-lightmode-1.webp" alt="cv-light"></a>
+                <a href="./assets/images/Portfolio-lightmode-1.webp" target="_blank"download="./assets/images/Portfolio-lightmode-1.pdf"><img src="./assets/images/Portfolio-lightmode-1.webp" alt="cv-light"></a>
                 <a href="./assets/images/Portfolio lightmode-1.pdf" download="./assets/images/Portfolio-lightmode-1.pdf">Telecharger le CV</a>
             </div>
         </div>

@@ -587,6 +587,7 @@ h2 span {
   border: 1px solid grey;
   background-color: black;
   height: 350px;
+  cursor: pointer;
 }
 .travaux .container__travaux .box__travaux .box__img {
   width: 100%;
@@ -626,7 +627,6 @@ h2 span {
   align-items: center;
   height: 30%;
   box-sizing: border-box;
-  cursor: pointer;
   border-top: 1px solid grey;
   background-color: white;
   font-weight: bolder;
@@ -1246,13 +1246,12 @@ h2 span {
 .cv .container__cv .cv__light img:hover {
   width: 35%;
 }
+.cv .container__cv .cv__light a:hover + .dl {
+  font-weight: bolder;
+}
 .cv .container__cv .cv__light a {
   text-decoration: none;
   color: black;
-}
-.cv .container__cv .cv__light a:hover {
-  font-weight: bolder;
-  font-size: 16px;
 }
 
 @media (max-width: 1400px) {

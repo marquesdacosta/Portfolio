@@ -678,6 +678,7 @@ h2 span {
             border: 1px solid grey;
             background-color: black;
             height: 350px;
+            cursor: pointer;
             .box__img {
                 width: 100%;
                 position: relative;
@@ -716,7 +717,6 @@ h2 span {
                 align-items: center;
                 height: 30%;
                 box-sizing: border-box;
-                cursor: pointer;
                 border-top: 1px solid grey;
                 background-color: white;
                 font-weight: bolder;
@@ -1470,13 +1470,12 @@ h2 span {
             img:hover {
                 width: 35%;
             }
+            a:hover + .dl {
+                font-weight: bolder;
+            }
             a {
                 text-decoration: none;
                 color: black;
-            }
-            a:hover {
-                font-weight: bolder;
-                font-size: 16px;
             }
         }
     }
