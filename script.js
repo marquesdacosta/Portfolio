@@ -117,11 +117,13 @@ const projectDescriptions = {
     'Sophie-Bluel': {
         description:`
             <h4>Description :</h4>
-            <p></p>`,
+            <p>Développeur front-end chez ArchiWebos, une agence comptant 50 salariés. Je rejoins une équipe en renfort pour développer le site portfolio d'une architecte d'intérieur. La mission est de créer une page web dynamique en utilisant JavaScript et en communiquant avec une API.</p>`,
         mission:`
             <h4>Mission: </h4>
             <ul>
-                <li></li>
+                <li>Développer la page de présentation des travaux en gérant les événements utilisateurs et manipuler les éléments du DOM avec JavaScript pour une interface interactive.</li>
+                <li>Créer la page de connexion de l'administrateur permettant de se connecter pour gérer le contenu du site.</li>
+                <li>Conception et développement d'une modale pour uploader des médias, intégrant les fonctionnalités nécessaires pour une expérience utilisateur fluide.</li>
             </ul>
         `,
         link : 'https://github.com/marquesdacosta/Portfolio-architecte-sophie-bluel/tree/master/FrontEnd'
@@ -129,14 +131,17 @@ const projectDescriptions = {
     'Argent-Bank': {
         description:`
             <h4>Description :</h4>
-            <p></p>`,
+            <p>Après avoir rejoins Argent Bank, une banque en ligne, en tant que développeur front-end. J'ai contribué au développement d'une application bancaire utilisant React et Redux pour offrir une expérience utilisateur dynamique et réactive . Ma mission consiste à développer l'interface utilisateur et à intégrer le front-end avec le back-end via des appels API REST. </p>`,
         mission:`
             <h4>Mission: </h4>
             <ul>
-                <li></li>
+                <li>Création de l'application web avec React.</li>
+                <li>Gestion de l'état avec Redux.</li>
+                <li>Mise en place des fonctionnalités de connexion , déconnexion , modifications des infos du profil , restriction d'informations.</li>
+                <li>Définition et rédaction des points d'accès de l'API sur swagger pour intégrer des fonctionnalités sur la gestion des transactions.</li>
             </ul>
         `,
-        link : ''
+        link : 'https://github.com/marquesdacosta/ArgentBank-app'
     },
 };
 
