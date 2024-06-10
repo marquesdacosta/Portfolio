@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const borderskills = document.querySelectorAll('.div__icone');
     const borderstitle = document.querySelectorAll('.border__h3');
     const textapropos = document.querySelectorAll('.text__a-propos , .text__p');
+    const burger = document.querySelectorAll('.line');
     
     btnDarkmode.addEventListener('click', function() {
         containerDarkmode.classList.toggle('active');
@@ -18,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
             borderskills.forEach(skill => {
                 skill.classList.add('borderskill');
             });
+            burger.forEach(element => {
+                element.id = "light-mode";
+            })
             borderstitle.forEach(element => {
                 element.id = "light-mode";
             });
@@ -33,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
             borderskills.forEach(skill => {
                 skill.classList.remove('borderskill');
             });
+            burger.forEach(element => {
+                element.id = null;
+            })
             borderstitle.forEach(element => {
                 element.id = null;
             });
@@ -200,3 +207,14 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(icon);
         });
     });
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const header = document.querySelector('header');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        header.classList.toggle('header-active');
+    });
+});

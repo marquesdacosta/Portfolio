@@ -7,73 +7,86 @@
 // HEADER //
 
 header {
-    display: flex;
-    height: 150px;
     width: 100%;
     background-color: wheat;
-    nav {
-        height: 150px;
-        position: fixed;
-        background-color: wheat;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-        border-bottom: 1px solid gray;
+    height: 120px;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    border-bottom: 1px solid gray;
+    .div__darkmode {
         display: flex;
-        width: 100%;
-        .main__nav {
-            height: 100%;
-            display: flex;
-            width: 90%;
-            align-items: center;
-            justify-content: space-evenly;
-            a {
-                text-decoration: none;
-                font-weight: bolder;
-                color: black;
-                font-family: 'Press Start 2P', cursive;
-                font-size: 16px;
-                transition: font-size 0.5s ease;
-            }
-            a:hover {
-                font-size: 19px;
-            }
-        }
-                .div__darkmode {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 10%;
-                }
-        
-                .container__darkmode {
-                    height: 35px;
-                    width: 55%;
-                    background-color: black;
-                    border-radius: 20px;
-                    position: relative;
-                    display: flex;
-                    align-items: center;
-                    padding: 5px;
-                    box-sizing: border-box;
-                    transition: background-color 0.5s ease;
-                }
-        
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        .container__darkmode {
+                height: 35px;
+                width: 55%;
+                background-color: black;
+                border-radius: 20px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 5px;
+                box-sizing: border-box;
+                transition: background-color 0.5s ease;
                 .btn__darkmode {
-                    height: 30px;
-                    width: 30px;
-                    position: absolute;
-                    left: 5px;
-                    border-radius: 50%;
-                    background-color: wheat;
-                    cursor: pointer;
-                    transition: left 0.5s ease;
-                }
-        
-                .container__darkmode.active .btn__darkmode {
-                    left: calc(100% - 35px);
-                }
+                        height: 30px;
+                        width: 30px;
+                        position: absolute;
+                        left: 5px;
+                        border-radius: 50%;
+                        background-color: wheat;
+                        cursor: pointer;
+                        transition: left 0.5s ease;
+                    }
+            }
+        .container__darkmode.active .btn__darkmode {
+            left: calc(100% - 35px);
+        }
     }
+    nav {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        a {
+            text-decoration: none;
+            font-weight: bolder;
+            color: black;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            transition: font-size 0.5s ease;
+        }
+        a:hover {
+            font-size: 19px;
+        }
+    }
+}
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+}
+
+.burger .line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+}
+.nav-active {
+    visibility: visible;
+    align-items: flex-start;
+    align-self: flex-end;
+    position: relative;
+    left: -9%;
+    height: 200px;
+}
+
+.header-active {
+    height: 300px;
 }
 
 // RESPONSIVE // 
@@ -81,13 +94,11 @@ header {
 @media (max-width :1400px) {
     header {
         nav {
-            .main__nav {
-                a {
-                    font-size: 14px;
-                }
-                a:hover {
-                    font-size: 16px;
-                }
+            a {
+                font-size: 14px;
+            }
+            a:hover {
+                font-size: 16px;
             }
         }
     }
@@ -95,15 +106,14 @@ header {
 @media (max-width :1200px) {
     header {
         nav {
-            .main__nav {
-                a {
-                    font-size: 10px;
-                }
-
-                a:hover {
-                    font-size: 12px;
-                }
+            a {
+                font-size: 12px;
             }
+            a:hover {
+                font-size: 14px;
+            }
+        }
+        .div__darkmode{
             .container__darkmode {
                 width: 70%;
             }
@@ -112,91 +122,57 @@ header {
 }
 @media (max-width :800px) {
     header {
-        nav {
-            .container__darkmode {
-                height: 30px;
-                width: 80%;
-            }
-            .btn__darkmode {
-                height: 20px;
-                width: 20px;
-            }
+            .div__darkmode {
+                .container__darkmode {
+                    height: 30px;
+                    width: 80%;
+                    .btn__darkmode {
+                        height: 20px;
+                        width: 20px;
+                    }
+                }
             .container__darkmode.active .btn__darkmode {
                 left: calc(100% - 25px);
             }
         }
     }
 }
-@media (max-width: 600px) {
+@media (max-width : 768px) {
     header {
-        height: 100px;
+        padding-left: 20px;
+        padding-top: 50px;
+        flex-direction: row-reverse;
+        box-sizing: border-box;
         nav {
-            height: 100px;
-            .main__nav {
-                a {
-                    font-size: 8px;
-                }
-                a:hover {
-                    font-size: 10px;
-                }
-            }
-            .container__darkmode {
-                height: 25px;
-            }
+            visibility: hidden;
+            flex-direction: column;
+            width: 80%;
         }
-    }
-}
-@media (max-width: 500px) {
-    header {
-        nav {
-            .main__nav {
-                a {
-                    font-size: 8px;
-                }
-                a:hover {
-                    font-size: 10px;
-                }
-            }
-            .container__darkmode {
-                height: 20px;
-            }
-            .btn__darkmode {
-                height: 15px;
-                width: 15px;
-            }
-            .container__darkmode.active .btn__darkmode {
-                left: calc(100% - 20px);
-            }
+        .burger {
+            display: flex;
+            width: 10%;
         }
-    }
-}
-@media (max-width: 500px) {
-    header {
-        height: 70px;
-        nav {
-            height: 70px;
-            .main__nav {
-                a {
-                    font-size: 6px;
-                }
-                a:hover {
-                    font-size: 8px;
-                }
-            }
+        .div__darkmode {
+            width: 10%;
+            align-self: flex-start;
             .container__darkmode {
-                height: 15px;
-            }
-            .btn__darkmode {
-                height: 10px;
-                width: 10px;
-            }
-            .container__darkmode.active .btn__darkmode {
-                left: calc(100% - 15px);
+                width: 100%;
             }
         }
     }
 }
 
+@media (max-width : 500px) {
+    header {
+        padding-right: 20px;
+        .nav-active {
+            left: -13%;
+        }
+        .div__darkmode {
+            width: 15%;
+        }
+    }
+}
 // activation darkmode//
 
 .active {
@@ -232,6 +208,7 @@ header {
     font-family: 'Press Start 2P', cursive;
     letter-spacing: -10px;
     height: 665px;
+    padding-top: 200px;
     h1,h2 {
         width: 100%;
     }
@@ -264,7 +241,7 @@ header {
 @media (max-width: 700px ) {
     .accueil {
             letter-spacing: -12px;
-            padding: 70px 0px;
+            padding: 200px 0px 70px 0px;
     
             h1 {
                 span {
@@ -796,7 +773,7 @@ h2 span {
 }
 @media (max-width: 600px) {
     .travaux {
-        padding: 120px 50px 85px 50px;
+        padding: 150px 50px 85px 50px;
         .container__travaux {
             .box__travaux {
                 width: 60%;
@@ -806,7 +783,7 @@ h2 span {
 }
 @media (max-width: 500px) {
     .travaux {
-        padding: 120px 20px 85px 20px;
+        padding: 150px 20px 85px 20px;
         .container__travaux {
             .box__travaux {
                 width: 70%;
@@ -932,7 +909,7 @@ h2 span {
         }
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .modal {
         .modal-content {
             width: 80%;
@@ -1187,11 +1164,10 @@ h2 span {
 .contact {
     background-color: wheat;
     height: 600px;
-    padding: 250px 100px 100px 100px;
+    padding: 250px 100px 160px 100px;
     flex-direction: column;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid grey;
     .title__contact {
         width: 100%;
         display: flex;
@@ -1383,7 +1359,7 @@ h2 span {
 }
 @media (max-width: 600px) {
     .contact {
-        padding: 250px 30px 100px 30px;
+        padding: 160px 30px 100px 30px;
         .container__form {
             .form__content {
                 .container__right {
@@ -1411,7 +1387,7 @@ h2 span {
 .cv {
     background-color: wheat;
     height: 600px;
-    padding: 75px 100px 100px 100px;
+    padding: 75px 100px 50px 100px;
     flex-direction: column;
     display: flex;
     align-items: center;
@@ -1568,7 +1544,7 @@ h2 span {
 }
 @media (max-width: 600px) {
     .cv {
-        padding: 75px 30px 100px 30px;
+        padding: 100px 30px 0px 30px;
 }
 }
 @media (max-width: 500px) {
