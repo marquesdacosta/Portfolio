@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const borderstitle = document.querySelectorAll('.border__h3');
     const textapropos = document.querySelectorAll('.text__a-propos , .text__p');
     const burger = document.querySelectorAll('.line');
+    const lienprojet = document.querySelector('.lien__projet');
     
     btnDarkmode.addEventListener('click', function() {
         containerDarkmode.classList.toggle('active');
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 element.id = "apropos-mode";
             });
             containerDarkmode.id = "light-mode";
+            lienprojet.classList.add('borderskill')
             formElements.forEach(element => {
                 element.id = "light-mode";
             });
@@ -48,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             borderstitle.id = null;
             containerDarkmode.id = null;
+            lienprojet.classList.remove('borderskill')
             formElements.forEach(element => {
                 element.id = null;
             });
@@ -208,6 +211,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+
+
+//
     document.addEventListener('DOMContentLoaded', () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('nav');

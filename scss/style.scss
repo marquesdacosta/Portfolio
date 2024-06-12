@@ -824,7 +824,7 @@ h2 span {
     background-color: rgba(0, 0, 0, 0.4);
     .modal-content {
             background-color: #fefefe;
-            margin: 22% auto;
+            margin: 15% auto;
             border: 1px solid #888;
             width: 40%;
             text-align: center;
@@ -837,6 +837,9 @@ h2 span {
                     font-family: 'Press Start 2P', cursive;
                     margin-top: 20px;
                 }
+                .close-hide {
+                    visibility: hidden;
+                }
                 .close {
                         color: #aaa;
                         float: right;
@@ -844,7 +847,6 @@ h2 span {
                         font-weight: bold;
                         margin-left: 5px;
                     }
-                
                     .close:hover,
                     .close:focus {
                         color: black;
@@ -893,8 +895,7 @@ h2 span {
 
 // RESPONSIVE //
 
-
-@media (max-width: 1400px){
+@media (max-width: 1440px) {
     .modal {
         .modal-content {
             width: 55%;
@@ -912,40 +913,71 @@ h2 span {
 @media (max-width: 768px) {
     .modal {
         .modal-content {
-            width: 80%;
-            margin: 40% auto;
+                    width: 100%;
+                    margin-top: 120px;
+                    .modal_title {
+                        flex-direction: row-reverse;
+                        .close-hide {
+                            visibility: visible;
+                            margin-top: 15px;
+                            align-self: flex-start;
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                        .close {
+                            margin-top: 5px;
+                            align-self: flex-start;
+                            visibility: hidden;
+                        }
+                        p {
+                            font-size: 24px;
+                        }
+                    }
+                    .modal_description {
+                        padding: 70px;
+                        gap: 50px;
+                        .description {
+                            p {
+                                font-size: 20px;
+                                line-height: 25px;
+                            }
+                            h4 {
+                                font-size: 24px;
+                            }
+                        }
+                        .mission {
+                            ul {
+                                font-size: 20px;
+                            }
+                            h4 {
+                                font-size: 24px;
+                            }
+                        }
+                        .lien__projet {
+                            padding: 10px;
+                        }
+                    }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .modal {
+        .modal-content {
             .modal_description {
-                padding: 30px;
-                .description {
-                    p {
-                        font-size: 14px;
-                    }
-                }
-                .mission {
-                    ul {
-                        font-size: 14px;
-                    }
+                padding: 50px 20px;
+                .lien__projet {
+                    width: 60%;
                 }
             }
         }
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .modal {
         .modal-content {
-            width: 90%;
-            .modal_description {
-                padding: 15px;
-                gap: 20px;
-                .description {
-                    p {
-                        font-size: 10px;
-                    }
-                }
-                .mission {
-                    ul {
-                        font-size: 10px;
-                    }
+            .modal_title {
+                p {
+                    margin-top: 50px;
                 }
             }
         }

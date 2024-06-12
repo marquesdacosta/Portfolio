@@ -711,7 +711,7 @@ h2 span {
 }
 .modal .modal-content {
   background-color: #fefefe;
-  margin: 22% auto;
+  margin: 15% auto;
   border: 1px solid #888;
   width: 40%;
   text-align: center;
@@ -725,6 +725,9 @@ h2 span {
 .modal .modal-content .modal_title p {
   font-family: "Press Start 2P", cursive;
   margin-top: 20px;
+}
+.modal .modal-content .modal_title .close-hide {
+  visibility: hidden;
 }
 .modal .modal-content .modal_title .close {
   color: #aaa;
@@ -776,7 +779,7 @@ h2 span {
   font-weight: bold;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1440px) {
   .modal .modal-content {
     width: 55%;
   }
@@ -789,32 +792,59 @@ h2 span {
 }
 @media (max-width: 768px) {
   .modal .modal-content {
-    width: 80%;
-    margin: 40% auto;
+    width: 100%;
+    margin-top: 120px;
+  }
+  .modal .modal-content .modal_title {
+    flex-direction: row-reverse;
+  }
+  .modal .modal-content .modal_title .close-hide {
+    visibility: visible;
+    margin-top: 15px;
+    align-self: flex-start;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  .modal .modal-content .modal_title .close {
+    margin-top: 5px;
+    align-self: flex-start;
+    visibility: hidden;
+  }
+  .modal .modal-content .modal_title p {
+    font-size: 24px;
   }
   .modal .modal-content .modal_description {
-    padding: 30px;
+    padding: 70px;
+    gap: 50px;
   }
   .modal .modal-content .modal_description .description p {
-    font-size: 14px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .modal .modal-content .modal_description .description h4 {
+    font-size: 24px;
   }
   .modal .modal-content .modal_description .mission ul {
-    font-size: 14px;
+    font-size: 20px;
+  }
+  .modal .modal-content .modal_description .mission h4 {
+    font-size: 24px;
+  }
+  .modal .modal-content .modal_description .lien__projet {
+    padding: 10px;
   }
 }
-@media (max-width: 500px) {
-  .modal .modal-content {
-    width: 90%;
-  }
+@media (max-width: 600px) {
   .modal .modal-content .modal_description {
-    padding: 15px;
-    gap: 20px;
+    padding: 50px 20px;
   }
-  .modal .modal-content .modal_description .description p {
-    font-size: 10px;
+  .modal .modal-content .modal_description .lien__projet {
+    width: 60%;
   }
-  .modal .modal-content .modal_description .mission ul {
-    font-size: 10px;
+}
+@media (max-width: 600px) {
+  .modal .modal-content .modal_title p {
+    margin-top: 50px;
   }
 }
 .competences {
