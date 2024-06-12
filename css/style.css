@@ -20,6 +20,7 @@ header .div__darkmode {
   width: 10%;
 }
 header .div__darkmode .container__darkmode {
+  cursor: pointer;
   height: 35px;
   width: 55%;
   background-color: black;
@@ -626,8 +627,8 @@ h2 span {
   background-color: white;
   font-weight: bolder;
 }
-.travaux .container__travaux .box__travaux .box__description:hover {
-  opacity: 0.8;
+.travaux .container__travaux .box__travaux:hover {
+  opacity: 0.7;
 }
 
 @media (max-width: 1800px) {
@@ -1115,6 +1116,7 @@ h2 span {
   border: black 1px solid;
   padding: 5px;
   width: 100%;
+  resize: none;
 }
 .contact .container__form .form__content .container__right form .submit {
   background-color: wheat;
@@ -1233,6 +1235,8 @@ h2 span {
   height: 600px;
   margin-top: 100px;
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 .cv .container__cv .cv__dark {
   text-align: center;
@@ -1240,13 +1244,11 @@ h2 span {
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  width: 200px;
 }
 .cv .container__cv .cv__dark img {
-  width: 30%;
+  width: 100%;
   cursor: pointer;
-}
-.cv .container__cv .cv__dark img:hover {
-  width: 35%;
 }
 .cv .container__cv .cv__dark a {
   text-decoration: none;
@@ -1255,6 +1257,10 @@ h2 span {
 .cv .container__cv .cv__dark a:hover {
   font-weight: bolder;
   font-size: 16px;
+  width: 120%;
+}
+.cv .container__cv .cv__dark p {
+  margin-top: 10px;
 }
 .cv .container__cv .cv__light {
   text-align: center;
@@ -1262,20 +1268,23 @@ h2 span {
   flex-direction: column;
   align-items: center;
   gap: 25px;
+  width: 200px;
 }
 .cv .container__cv .cv__light img {
-  width: 30%;
+  width: 100%;
   cursor: pointer;
-}
-.cv .container__cv .cv__light img:hover {
-  width: 35%;
-}
-.cv .container__cv .cv__light a:hover + .dl {
-  font-weight: bolder;
 }
 .cv .container__cv .cv__light a {
   text-decoration: none;
   color: black;
+}
+.cv .container__cv .cv__light a:hover {
+  font-weight: bolder;
+  font-size: 16px;
+  width: 120%;
+}
+.cv .container__cv .cv__light p {
+  margin-top: 10px;
 }
 
 @media (max-width: 1400px) {

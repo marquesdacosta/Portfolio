@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const burger = document.querySelectorAll('.line');
     const lienprojet = document.querySelector('.lien__projet');
     
-    btnDarkmode.addEventListener('click', function() {
+    containerDarkmode.addEventListener('click', function() {
         containerDarkmode.classList.toggle('active');
         if (containerDarkmode.classList.contains('active')) {
             document.body.classList.add('dark-mode');

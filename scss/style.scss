@@ -20,6 +20,7 @@ header {
         justify-content: center;
         width: 10%;
         .container__darkmode {
+            cursor: pointer;
                 height: 35px;
                 width: 55%;
                 background-color: black;
@@ -698,9 +699,9 @@ h2 span {
                 background-color: white;
                 font-weight: bolder;
             }
-            .box__description:hover {
-                opacity: 0.8;
-            }
+        }
+        .box__travaux:hover {
+            opacity: 0.7;
         }
     }
 }
@@ -1282,6 +1283,7 @@ h2 span {
                         border: black 1px solid;
                         padding: 5px;
                         width: 100%;
+                        resize: none;
                     }
                     .submit {
                         background-color: wheat;
@@ -1443,18 +1445,18 @@ h2 span {
         height: 600px;
         margin-top: 100px;
         display: flex;
+        justify-content: space-evenly;
+        width: 100%;
         .cv__dark {
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 25px;
+            width: 200px;
             img {
-                width: 30%;
+                width: 100%;
                 cursor: pointer;
-            }
-            img:hover {
-                width: 35%;
             }
             a {
                 text-decoration: none;
@@ -1463,6 +1465,10 @@ h2 span {
             a:hover {
                 font-weight: bolder;
                 font-size: 16px;
+                width: 120%;
+            }
+            p {
+                margin-top: 10px;
             }
         }
         .cv__light {
@@ -1471,20 +1477,23 @@ h2 span {
             flex-direction: column;
             align-items: center;
             gap: 25px;
+            width: 200px;
             img {
-                width: 30%;
+                width: 100%;
                 cursor: pointer;
-            }
-            img:hover {
-                width: 35%;
-            }
-            a:hover + .dl {
-                font-weight: bolder;
             }
             a {
                 text-decoration: none;
                 color: black;
             }
+            a:hover {
+                font-weight: bolder;
+                font-size: 16px;
+                width: 120%;
+            }
+            p {
+                margin-top: 10px;
+            }            
         }
     }
 }
